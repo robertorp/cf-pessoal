@@ -39,12 +39,20 @@ export function NewTransactionModal({
         <input type="number" placeholder="Valor" />
 
         <TransectionTypeContainer>
-          <RadioBox type="button" onClick={() => setType('deposit')}>
+          <RadioBox
+            type="button"
+            onClick={() => setType('deposit')}
+            isActive={type === 'deposit'}
+          >
             <img src={incomeImg} alt="Entrada" />
             <span>Entrada</span>
           </RadioBox>
 
-          <RadioBox type="button" onClick={() => setType('withdraw')}>
+          <RadioBox
+            type="button"
+            onClick={() => setType('withdraw')}
+            isActive={type === 'withdraw'}
+          >
             <img src={outcomeImg} alt="Saída" />
             <span>Saída</span>
           </RadioBox>
